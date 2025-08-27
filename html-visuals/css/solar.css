@@ -1,0 +1,159 @@
+/* Theme: Solar */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #FFF7E6, #FFE8B5); /* Strahlender, sonniger Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif; /* Moderne, abgerundete Sans-Serif-Schrift */
+    overflow: auto;
+    padding: 2px;
+}
+/* Container */
+.container {
+    background: #FFF7E6; /* Warme, sonnige Fläche */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #F6A623; /* Lebendiges Orange */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #4A2C0B; /* Dunkles Braun */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: #FFEFD5; /* Warme, sonnige Fläche */
+    border: 1px solid #F6A623; /* Lebendiges Orange */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4A2C0B; /* Dunkles Braun */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #4A2C0B; /* Dunkles Braun */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #4A2C0B; /* Dunkles Braun */
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: #FFEFD5; /* Warme, sonnige Fläche */
+    border: 1px solid #F6A623; /* Lebendiges Orange */
+    border-radius: 6px;
+    padding: 8px;
+    color: #4A2C0B; /* Dunkles Braun */
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #F6A623; /* Lebendiges Orange bei Fokus */
+    box-shadow: 0 0 0 2px rgba(246, 166, 35, 0.3);
+}
+.form-grid span {
+    color: #4A2C0B; /* Dunkles Braun */
+}
+/* Buttons */
+button {
+    background: #FFF7E6; /* Warme, sonnige Fläche */
+    color: #4A2C0B; /* Dunkles Braun */
+    border: 1px solid #F6A623; /* Lebendiges Orange */
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+}
+button:hover {
+    background: #FFEFD5; /* Dunkleres Sonnig */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #F6A623; /* Lebendiges Orange */
+    padding: 8px 8px;
+    color: #FFFFFF; /* Weiß für Kontrast */
+}
+.btn-secondary:hover {
+    background: #DD8E1F; /* Dunkleres Orange */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #FFF7E6; /* Warme, sonnige Fläche */
+    color: #4A2C0B; /* Dunkles Braun */
+    padding: 6px 12px;
+    border: 1px solid #F6A623; /* Lebendiges Orange */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block;
+}
+.btn-secondary .tooltip {
+    background: #FFF7E6; /* Warme, sonnige Fläche */
+    color: #4A2C0B; /* Dunkles Braun */
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: auto;
+    margin: 0;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #F6A623; /* Lebendiges Orange */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

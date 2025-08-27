@@ -1,0 +1,158 @@
+/* Theme: Darkly */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #212529, #343a40); /* Darkly: Dunkler Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', Arial, sans-serif;
+    overflow: auto;
+    padding: 2px;
+}
+/* Glassmorphism-Container für Darkly */
+.container {
+    background: rgba(33, 37, 41, 0.3); /* Dunkler Glass-Effekt */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 123, 255, 0.4); /* Dunkelblau als Rand */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #f8f9fa; /* Helles Grau für Text */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: rgba(52, 58, 64, 0.5); /* Leicht heller Hintergrund für Rahmen */
+    border: 1px solid rgba(0, 123, 255, 0.2); /* Subtiler Dunkelblau-Rand */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #007bff; /* Dunkelblau */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #17a2b8; /* Cyan für Überschriften */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #f8f9fa;
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: rgba(52, 58, 64, 0.8); /* Dunkler Input-Hintergrund */
+    border: 1px solid rgba(0, 123, 255, 0.5); /* Dunkelblau-Rand */
+    border-radius: 8px;
+    padding: 8px;
+    color: #f8f9fa;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #17a2b8; /* Cyan bei Fokus */
+    box-shadow: 0 0 0 2px rgba(23, 162, 184, 0.5);
+}
+.form-grid span {
+    color: #333333;
+}
+/* Buttons */
+button {
+    background: #007bff; /* Dunkelblau für Primär-Buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative; /* Hinzugefügt für Tooltip-Positionierung */
+}
+button:hover {
+    background: #0056b3; /* Dunkleres Blau bei Hover */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #6c757d; /* Grau für Sekundär-Buttons */
+    padding: 8px 8px;
+}
+.btn-secondary:hover {
+    background: #5a6268; /* Dunkler bei Hover */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px; /* Direkt über dem Button */
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #343a40; /* Dunkler Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    padding: 6px 12px;
+    border: 1px solid #007bff; /* Dunkelblau */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block; /* Tooltip nur bei Klick anzeigen */
+}
+.btn-secondary .tooltip {
+    background: #495057; /* Hellerer Hintergrund für btn-secondary */
+    color: #ffffff; /* Weißer Text für Sichtbarkeit */
+    position: absolute;
+    top: -30px; /* Oberhalb des Buttons */
+    right: 0; /* Rechte Kante des Tooltips an der rechten Buttonkante */
+    left: auto; /* Entfernt zentrierte Positionierung */
+    margin: 0; /* Entfernt zentrierte Ausrichtung */
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #007bff; /* Dunkelblau */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

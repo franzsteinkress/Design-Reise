@@ -1,0 +1,159 @@
+/* Theme: Slate */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #2D3748, #4A5568); /* Kühler, schieferartiger Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif; /* Moderne, geometrische Sans-Serif-Schrift */
+    overflow: auto;
+    padding: 2px;
+}
+/* Container */
+.container {
+    background: #4A5568; /* Dunkle, schieferartige Fläche */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #4FD1C5; /* Subtiles Cyan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #E2E8F0; /* Helles Grau */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: #2D3748; /* Dunkle, schieferartige Fläche */
+    border: 1px solid #4FD1C5; /* Subtiles Cyan */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #E2E8F0; /* Helles Grau */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #E2E8F0; /* Helles Grau */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #E2E8F0; /* Helles Grau */
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: #2D3748; /* Dunkle, schieferartige Fläche */
+    border: 1px solid #4FD1C5; /* Subtiles Cyan */
+    border-radius: 6px;
+    padding: 8px;
+    color: #E2E8F0; /* Helles Grau */
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #4FD1C5; /* Subtiles Cyan bei Fokus */
+    box-shadow: 0 0 0 2px rgba(79, 209, 197, 0.3);
+}
+.form-grid span {
+    color: #E2E8F0; /* Helles Grau */
+}
+/* Buttons */
+button {
+    background: #4A5568; /* Dunkle, schieferartige Fläche */
+    color: #E2E8F0; /* Helles Grau */
+    border: 1px solid #4FD1C5; /* Subtiles Cyan */
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+}
+button:hover {
+    background: #2D3748; /* Dunkleres Schiefergrau */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #4FD1C5; /* Subtiles Cyan */
+    padding: 8px 8px;
+    color: #1A202C; /* Dunkles Grau für Kontrast */
+}
+.btn-secondary:hover {
+    background: #38B2AC; /* Dunkleres Cyan */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #4A5568; /* Dunkle, schieferartige Fläche */
+    color: #E2E8F0; /* Helles Grau */
+    padding: 6px 12px;
+    border: 1px solid #4FD1C5; /* Subtiles Cyan */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block;
+}
+.btn-secondary .tooltip {
+    background: #4A5568; /* Dunkle, schieferartige Fläche */
+    color: #E2E8F0; /* Helles Grau */
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: auto;
+    margin: 0;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #4FD1C5; /* Subtiles Cyan */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

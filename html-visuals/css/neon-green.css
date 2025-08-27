@@ -1,0 +1,158 @@
+/* Theme: Dark Neon Mode (Green) */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #0a0e17, #1a1e2c); /* Dunkler Gradient mit Neon-Akzent */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+    overflow: auto;
+    padding: 2px;
+}
+/* Container */
+.container {
+    background: rgba(10, 14, 23, 0.3); /* Dunkler Glass-Effekt */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(57, 255, 20, 0.3); /* Neon-grüner Rand */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #ffffff; /* Helles Weiß für Text */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: rgba(10, 14, 23, 0.5); /* Dunkler Glass-Hintergrund */
+    border: 1px solid rgba(57, 255, 20, 0.2); /* Subtiler neon-grüner Rand */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #39ff14; /* Neon-Grün */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #39ff14; /* Neon-Grün */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #ffffff; /* Helles Weiß */
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: rgba(10, 14, 23, 0.9); /* Dunkler Glass-Input */
+    border: 1px solid rgba(57, 255, 20, 0.5); /* Neon-grüner Rand */
+    border-radius: 8px;
+    padding: 8px;
+    color: #ffffff; /* Helles Weiß */
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #39ff14; /* Neon-Grün bei Fokus */
+    box-shadow: 0 0 0 2px rgba(57, 255, 20, 0.3);
+}
+.form-grid span {
+    color: #ffffff; /* Helles Weiß */
+}
+/* Buttons */
+button {
+    background: #39ff14; /* Neon-Grün */
+    color: #ffffff; /* Weißer Text */
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+}
+button:hover {
+    background: #2ecc71; /* Dunkleres Grün */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #2d3748; /* Dunkles Grau */
+    padding: 8px 8px;
+}
+.btn-secondary:hover {
+    background: #1a202c; /* Dunkleres Grau */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #0a0e17e6; /* Dunkler Glass-Effekt */
+    color: #39ff14; /* Neon-Grün */
+    padding: 6px 12px;
+    border: 1px solid #39ff14; /* Neon-grüner Rand */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block;
+}
+.btn-secondary .tooltip {
+    background: #1a202cf2; /* Etwas heller für Kontrast */
+    color: #39ff14; /* Neon-Grün */
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: auto;
+    margin: 0;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #39ff14; /* Neon-grüner Rand */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

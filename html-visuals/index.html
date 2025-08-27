@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designkatalog</title>
+    <link rel="stylesheet" href="./styles/base.css">
+    <script src="./assets/script.js" defer></script>
+</head>
+<body>
+    <div class="overlay-container">
+        <div class="overlay-box">
+            <div class="header">
+                <h1>Design Journey</h1>
+                <!--<span><h1>Design Journey</h1></span>
+                <label class="toggle-switch">
+                    <input type="checkbox">
+                </label>-->
+                <h3 id="counter">Design</h3>
+            </div>
+
+            <div class="iframe-wrapper"> <!-- style="width: 100%; height: 600px;"-->
+                <iframe id="themeFrame" title="Design Preview" src="./themes/theme-001_brite.html" frameborder="0" style="width: 100%; height: 100%;"></iframe> <!-- loading="lazy"-->
+            </div>
+
+            <div class="footer">
+                <button onclick="prevTheme()"> ◀ </button>
+                <button onclick="nextTheme()"> ▶ </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

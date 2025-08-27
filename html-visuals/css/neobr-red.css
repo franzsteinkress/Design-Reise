@@ -1,0 +1,158 @@
+/* Theme: Neo-Brutal (Red) */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #1c1c1c, #2a2a2a); /* Dunkler monochromer Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    overflow: auto;
+    padding: 2px;
+}
+/* Container */
+.container {
+    background: #2a2a2a; /* Dunkle matte Fläche */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #D32F2F; /* Kräftiger roter Rand */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #ffffff; /* Helles Weiß für Text */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: #333333; /* Dunkle matte Fläche */
+    border: 1px solid #D32F2F; /* Kräftiger roter Rand */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #D32F2F; /* Kräftiges Rot */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #D32F2F; /* Kräftiges Rot */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #ffffff; /* Helles Weiß */
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: #333333; /* Dunkle matte Fläche */
+    border: 1px solid #D32F2F; /* Kräftiger roter Rand */
+    border-radius: 6px;
+    padding: 8px;
+    color: #ffffff; /* Helles Weiß */
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #D32F2F; /* Kräftiges Rot bei Fokus */
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.3);
+}
+.form-grid span {
+    color: #ffffff; /* Helles Weiß */
+}
+/* Buttons */
+button {
+    background: #D32F2F; /* Kräftiges Rot */
+    color: #ffffff; /* Weißer Text */
+    border: 1px solid #000000; /* Schwarzer Rand */
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+}
+button:hover {
+    background: #B71C1C; /* Dunkleres Rot */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #4a4a4a; /* Dunkles Grau */
+    padding: 8px 8px;
+}
+.btn-secondary:hover {
+    background: #3c3c3c; /* Dunkleres Grau */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #2a2a2a; /* Dunkle matte Fläche */
+    color: #D32F2F; /* Kräftiges Rot */
+    padding: 6px 12px;
+    border: 1px solid #D32F2F; /* Kräftiger roter Rand */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block;
+}
+.btn-secondary .tooltip {
+    background: #2a2a2a; /* Dunkle matte Fläche */
+    color: #D32F2F; /* Kräftiges Rot */
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: auto;
+    margin: 0;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #D32F2F; /* Kräftiger roter Rand */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

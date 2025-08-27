@@ -1,0 +1,86 @@
+<!-- themes/theme-013_morph.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GUI mit Morph Theme</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/morph.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Frame: Schlüsselpaar generieren -->
+        <div id="frame_key" class="frame">
+            <h2>Schlüsselpaar generieren</h2>
+            <div class="center">
+                <button /*onclick="generate_keypair()"*/>Schlüsselpaar generieren<span class="tooltip">Funktion nicht implementiert.</span></button>
+            </div>
+        </div>
+
+        <!-- Frame: Lizenzdatei erstellen -->
+        <div id="frame_create" class="frame">
+            <h2>Lizenzdatei erstellen</h2>
+            <div class="form-grid">
+                <label for="lizenznehmer">Lizenznehmer:</label>
+                <input type="text" id="lizenznehmer" value="Max Mustermann">
+                <span></span>
+                <label for="produkt_id">Produkt-ID:</label>
+                <input type="text" id="produkt_id" value="PROD123">
+                <span></span>
+                <label for="ablaufdatum">Ablaufdatum:</label>
+                <!-- <input type="date" id="ablaufdatum" value="2026-12-31"> -->
+                <input type="text" id="ablaufdatum" value="2026-12-31">
+                <span></span>
+                <label for="lizenz_datei">Lizenzdatei (Pfad):</label>
+                <input type="text" id="lizenz_datei" value="licenses/lizenz.json">
+                <button /*onclick="choose_license_save_path()"*/ class="btn-secondary">Pfad wählen<span class="tooltip">Funktion nicht implementiert.</span></button>
+            </div>
+            <div class="center">
+                <button /*onclick="create_license()"*/>Lizenz erstellen<span class="tooltip">Funktion nicht implementiert.</span></button>
+            </div>
+        </div>
+
+        <!-- Frame: Lizenzdatei prüfen -->
+        <div id="frame_check" class="frame">
+            <h2>Lizenzdatei prüfen</h2>
+            <div class="form-grid">
+                <label for="lizenz_datei_check">Lizenzdatei (Inhalt):</label>
+                <input type="text" id="lizenz_datei_check" value="licenses/lizenz.json">
+                <button /*onclick="choose_license_load_path()"*/ class="btn-secondary">Datei wählen<span class="tooltip">Funktion nicht implementiert.</span></button>
+            </div>
+            <div class="center">
+                <button /*onclick="check_license()"*/>Lizenz prüfen<span class="tooltip">Funktion nicht implementiert.</span></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTooltip(button) {
+            const tooltip = button.querySelector('.tooltip');
+            tooltip.style.display = 'block';
+            setTimeout(() => {
+                tooltip.style.display = 'none';
+            }, 2000);
+        }
+        // Platzhalter für JavaScript-Funktionen
+        function generate_keypair() {
+            alert("Schlüsselpaar generieren: Nicht implementiert.");
+        }
+        function choose_license_save_path() {
+            alert("Pfad wählen (Speichern): Nicht implementiert.");
+        }
+        function create_license() {
+            alert("Lizenz erstellen: Nicht implementiert.");
+        }
+        function choose_license_load_path() {
+            alert("Datei wählen (Laden): Nicht implementiert.");
+        }
+        function check_license() {
+            alert("Lizenz prüfen: Nicht implementiert.");
+        }
+        // Debugging: Prüfen, ob das Dokument geladen wird
+        console.log("GUI Morph geladen.");
+    </script>
+</body>
+</html>

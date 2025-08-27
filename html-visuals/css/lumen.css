@@ -1,0 +1,159 @@
+/* Theme: Lumen */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #F9FAFB, #E5E7EB); /* Heller, luftiger Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif; /* Moderne Sans-Serif-Schrift */
+    overflow: auto;
+    padding: 2px;
+}
+/* Container */
+.container {
+    background: #FFFFFF; /* Helle, klare Fläche */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #60A5FA; /* Subtiles Blau */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #1F2A44; /* Dunkles Grau */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: #F9FAFB; /* Helle, klare Fläche */
+    border: 1px solid #60A5FA; /* Subtiles Blau */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1F2A44; /* Dunkles Grau */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1F2A44; /* Dunkles Grau */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #1F2A44; /* Dunkles Grau */
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: #F9FAFB; /* Helle, klare Fläche */
+    border: 1px solid #60A5FA; /* Subtiles Blau */
+    border-radius: 6px;
+    padding: 8px;
+    color: #1F2A44; /* Dunkles Grau */
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #60A5FA; /* Subtiles Blau bei Fokus */
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.3);
+}
+.form-grid span {
+    color: #1F2A44; /* Dunkles Grau */
+}
+/* Buttons */
+button {
+    background: #FFFFFF; /* Helle, klare Fläche */
+    color: #1F2A44; /* Dunkles Grau */
+    border: 1px solid #60A5FA; /* Subtiles Blau */
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+}
+button:hover {
+    background: #F9FAFB; /* Dunkleres Weiß */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #60A5FA; /* Blaues Akzent */
+    padding: 8px 8px;
+    color: #FFFFFF; /* Weiß für Kontrast */
+}
+.btn-secondary:hover {
+    background: #3B82F6; /* Dunkleres Blau */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #FFFFFF; /* Helle, klare Fläche */
+    color: #1F2A44; /* Dunkles Grau */
+    padding: 6px 12px;
+    border: 1px solid #60A5FA; /* Subtiles Blau */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block;
+}
+.btn-secondary .tooltip {
+    background: #FFFFFF; /* Helle, klare Fläche */
+    color: #1F2A44; /* Dunkles Grau */
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: auto;
+    margin: 0;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #60A5FA; /* Subtiles Blau */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

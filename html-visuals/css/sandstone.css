@@ -1,0 +1,159 @@
+/* Theme: Sandstone */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #F4E8D1, #E8D5B9); /* Warmer, sandiger Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif; /* Elegante Serif-Schrift */
+    overflow: auto;
+    padding: 2px;
+}
+/* Container */
+.container {
+    background: #F9EDE2; /* Natürliche, sandige Fläche */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid #D97706; /* Warmes Terracotta */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #3C2F2F; /* Dunkles Braun */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: #F4E8D1; /* Natürliche, sandige Fläche */
+    border: 1px solid #D97706; /* Warmes Terracotta */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #3C2F2F; /* Dunkles Braun */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #3C2F2F; /* Dunkles Braun */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #3C2F2F; /* Dunkles Braun */
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: #F4E8D1; /* Natürliche, sandige Fläche */
+    border: 1px solid #D97706; /* Warmes Terracotta */
+    border-radius: 6px;
+    padding: 8px;
+    color: #3C2F2F; /* Dunkles Braun */
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #D97706; /* Warmes Terracotta bei Fokus */
+    box-shadow: 0 0 0 2px rgba(217, 119, 6, 0.3);
+}
+.form-grid span {
+    color: #3C2F2F; /* Dunkles Braun */
+}
+/* Buttons */
+button {
+    background: #F9EDE2; /* Natürliche, sandige Fläche */
+    color: #3C2F2F; /* Dunkles Braun */
+    border: 1px solid #D97706; /* Warmes Terracotta */
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+}
+button:hover {
+    background: #F4E8D1; /* Dunkleres Sandig */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #D97706; /* Warmes Terracotta */
+    padding: 8px 8px;
+    color: #FFFFFF; /* Weiß für Kontrast */
+}
+.btn-secondary:hover {
+    background: #C16D05; /* Dunkleres Terracotta */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #F9EDE2; /* Natürliche, sandige Fläche */
+    color: #3C2F2F; /* Dunkles Braun */
+    padding: 6px 12px;
+    border: 1px solid #D97706; /* Warmes Terracotta */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block;
+}
+.btn-secondary .tooltip {
+    background: #F9EDE2; /* Natürliche, sandige Fläche */
+    color: #3C2F2F; /* Dunkles Braun */
+    position: absolute;
+    top: -30px;
+    right: 0;
+    left: auto;
+    margin: 0;
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #D97706; /* Warmes Terracotta */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}

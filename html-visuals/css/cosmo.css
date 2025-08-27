@@ -1,0 +1,158 @@
+/* Theme: Cosmo */
+/* Basis-Styling für iframe-Kompatibilität */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(135deg, #1a1b26, #2c3e50); /* Cosmo: Dunkler Weltraum-Gradient */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', Arial, sans-serif;
+    overflow: auto;
+    padding: 2px;
+}
+/* Glassmorphism-Container für Cosmo */
+.container {
+    background: rgba(26, 27, 38, 0.2); /* Dunkler, kosmischer Glass-Effekt */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(59, 130, 246, 0.3); /* Kosmisches Blau als Rand */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: #e2e8f0; /* Helles Grau für Text */
+}
+/* Frame-Styling */
+.frame {
+    padding: 16px;
+    background: rgba(44, 62, 80, 0.7); /* Dunklerer Hintergrund für Frames */
+    border: 1px solid rgba(59, 130, 246, 0.2); /* Subtiler blauer Rand */
+    border-radius: 8px;
+}
+.frame > div:first-child {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #3b82f6; /* Kosmisches Blau */
+}
+.frame h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #60a5fa; /* Helleres kosmisches Blau für Überschriften */
+}
+/* Grid für Formulare */
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 3fr 2.2fr;
+    gap: 12px;
+    align-items: center;
+}
+.form-grid label {
+    flex: 1;
+    text-align: left;
+    color: #e2e8f0;
+    font-size: 14px;
+}
+.form-grid input {
+    flex: 2;
+    text-align: left;
+    background: rgba(26, 27, 38, 0.8); /* Dunkler Cosmo-Input-Hintergrund */
+    border: 1px solid rgba(59, 130, 246, 0.5); /* Kosmisches Blau */
+    border-radius: 8px;
+    padding: 8px;
+    color: #e2e8f0;
+    font-size: 14px;
+    width: 100%;
+    outline: none;
+}
+.form-grid input:focus {
+    border-color: #60a5fa; /* Helleres Blau bei Fokus */
+    box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.5);
+}
+.form-grid span {
+    color: #333333;
+}
+/* Buttons */
+button {
+    background: #3b82f6; /* Kosmisches Blau für Primär-Buttons */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    width: 100%;
+    max-width: 200px;
+    position: relative; /* Hinzugefügt für Tooltip-Positionierung */
+}
+button:hover {
+    background: #2563eb; /* Dunkleres Blau bei Hover */
+}
+.btn-secondary {
+    flex: 1;
+    text-align: center;
+    background: #4b5e7b; /* Sekundärfarbe: Dunkles Cosmo-Grau */
+    padding: 8px 8px;
+}
+.btn-secondary:hover {
+    background: #3b4a66; /* Dunkler bei Hover */
+    padding: 8px 8px;
+}
+/* Zentrierte Buttons */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+}
+/* Tooltip-Styling */
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -30px; /* Direkt über dem Button */
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background: #2c3e50; /* Dunkler Hintergrund */
+    color: #ffffff; /* Weißer Text */
+    padding: 6px 12px;
+    border: 1px solid #3b82f6; /* Kosmisches Blau */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+button:hover .tooltip {
+    display: block;
+}
+button:active .tooltip {
+    display: block; /* Tooltip nur bei Klick anzeigen */
+}
+.btn-secondary .tooltip {
+    background: #34495e; /* Hellerer Hintergrund für btn-secondary */
+    color: #ffffff; /* Weißer Text für Sichtbarkeit */
+    position: absolute;
+    top: -30px; /* Oberhalb des Buttons */
+    right: 0; /* Rechte Kante des Tooltips an der rechten Buttonkante */
+    left: auto; /* Entfernt zentrierte Positionierung */
+    margin: 0; /* Entfernt zentrierte Ausrichtung */
+    width: fit-content;
+    padding: 6px 12px;
+    border: 1px solid #3b82f6; /* Kosmisches Blau */
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
