@@ -13,9 +13,9 @@ Die Kollektion umfasst:
 
 Perfekt für **UI Layout Inspiration**, Mockups, Prototypen und finale Webprojekte.
 
-🔗 **[Live-Demo Viewer](https://franzsteinkress.github.io/Design-Reise/html-visuals/index.html)**
-🔗 **[Blogpost (DE/EN)](https://steinkress.com/blog.html#post11)**
-🔗 **[GitHub Repository](https://github.com/franzsteinkress/Design-Reise)**
+- 🔗 **[Live-Demo Viewer](https://franzsteinkress.github.io/Design-Reise/html-visuals/index.html)**
+- 🔗 **[Blogpost (DE/EN)](https://steinkress.com/blog.html#post11)**
+- 🔗 **[GitHub Repository](https://github.com/franzsteinkress/Design-Reise)**
 
 ## Verfügbare Themes
 
