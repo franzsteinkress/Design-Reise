@@ -5,8 +5,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: linear-gradient(135deg, rgba(240, 242, 245, 0.9), rgba(220, 223, 230, 0.9));
     font-family: sans-serif;
+    background: linear-gradient(135deg, rgba(240, 242, 245, 0.9), rgba(220, 223, 230, 0.9));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,4 +111,33 @@ button {
 
 button:hover {
     background-color: #4B5563;
+}
+
+@media (max-width: 767px) {
+    .overlay-box {
+        width: 100vw;             /* fast volle Breite */
+        /* height: auto;             nicht fix, wächst mit Inhalt */
+        max-height: 90vh;         /* nie höher als Bildschirm */
+    }
+
+    .iframe-wrapper {
+        /* flex: unset; */
+        height: auto;
+        max-height: 70vh;         /* damit Footer nicht verdrängt wird */
+    }
+
+    iframe {
+        width: 100%;              /* passt sich Breite an */
+        height: 60vh;             /* angenehme Höhe für Mobile */
+    }
+
+    .header, .footer {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
 }
